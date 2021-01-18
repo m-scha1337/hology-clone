@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Willkommen zu Hology</title>
+</head>
+<body>
+<h2 style="text-align: center;">Herzlich willkommen, {{$uname}}, bei Hology!</h2>
+<br/>
+<div style="text-align: center;">
+Jemand hat sich mit deiner E-Mail adresse ({{$email}}) bei Hology registriert. <br>
+Wenn du dich in den letzten paar Minuten bei uns Registriert hast und du mit der Registrierung vorfahren willst, klicke bitte diesen Button:
+</div>
+<br>
+<br>
+<br/>
+<a href="{{route('userVerify', $token)}}" style="padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;">Registrieren</a>
+<br>
+<br>
+<br>
+<footer style="font-size: 8px;">
+    <a href="{{route("unsubscribeMail", $token)}}">Ich möchte keine E-Mails mehr von Ihnen empfangen</a>
+</footer>
+</body>
+</html>

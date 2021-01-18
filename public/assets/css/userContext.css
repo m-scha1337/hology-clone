@@ -1,0 +1,135 @@
+.contextBox{
+    width: 300px;
+    border: 4px solid #00bfb6;
+    padding: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: black;
+    font-family: arial;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(5%);
+    background-color: white;
+}
+.contextBox>div.events{
+    margin: 13% 0;
+}
+.contextBox>div.events:hover>i{
+    opacity: 0;
+    cursor: none;
+    transition: opacity .5s ease-in-out, pointer-events .5s ease-in-out;
+}
+.contextBox>div.events:hover>div.EventCreateHidden{
+    opacity: 1;
+    cursor: auto;
+    transition: opacity .5s ease-in-out, pointer-events .5s ease-in-out;
+}
+.contextBox>div.events>div.EventCreateHidden{
+    opacity: 0;
+    cursor: none;
+    transition: opacity .5s ease-in-out, pointer-events .5s ease-in-out;
+    transition-delay: 1.5s;
+}
+.contextBox>div.events>i{
+    opacity: 1;
+    cursor: auto;
+    transition: opacity .5s ease-in-out, pointer-events .5s ease-in-out;
+    transition-delay: 1.5s;
+}
+.contextBox>div.events>div.EventCreateHidden{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4rem;
+}
+.contextBox>div.events>div.EventCreateHidden>a>img{
+    height: 80px;
+}
+.contextBox>h1{
+    display: inline;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.contextBox>h1:after{
+    content: "";
+    border-bottom: black 2px solid;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+.contextBox>h2{
+    margin: 20px 0;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 700;
+    position: relative;
+}
+.contextBox>h2:after{
+    position: absolute;
+    content: "";
+    border-bottom: black 1px solid;
+    width: 20%;
+    bottom: 0;
+    left: 0;
+}
+.contextBox>hr{
+    border-top: black 2px solid;
+    width: 80%;
+    margin: 20px auto;
+}
+.sb9:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #00bfb6;
+    right: 50%;
+    top: 0;
+    transform: translate(50%,-24px);
+}
+aside.loginbtns>div.nodisplay{
+    display: none;
+}
+aside.loginbtns>div.contextBox>div.settings{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "usersettings logout";
+}
+aside.loginbtns>div.contextBox>div.settings>div.usersettings{
+    grid-area: usersettings;
+}
+aside.loginbtns>div.contextBox>div.settings>div.logout{
+    grid-area: logout;
+}
+aside.loginbtns>div.contextBox>div.settings>div.usersettings>a>img, aside.loginbtns>div.contextBox>div.settings>div.logout>a>img,aside.loginbtns>div.contextBox>div.adminSettings>a>img{
+    width: 45%;
+    border-radius: 100%;
+    background-color: #c1c1bd;
+}
+aside.loginbtns>div.contextBox>div.settings>div.usersettings>a.label, aside.loginbtns>div.contextBox>div.settings>div.logout>a.label, aside.loginbtns>div.contextBox>div.adminSettings>a.label{
+    display: block;
+    font-size: 0.9rem;
+    color: black;
+    text-decoration: underline;
+    margin: 15px auto;
+    overflow-wrap: anywhere;
+}
+.contextBox>div.event-list{
+    text-align: left;
+}
+.contextBox>div.event-list>div.event>hr{
+    margin: 0;
+    border-top: 1px solid black;
+    width: 40%;
+}
+.contextBox>div.event-list>div.event{
+    margin: 10px 0;
+}

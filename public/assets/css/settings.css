@@ -1,0 +1,23 @@
+div.settingsPage{
+    position: absolute;
+    left: 50vw;
+    top: 60vh;
+    background-color: white;
+    -webkit-box-shadow: 10px 10px 21px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 21px -6px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 21px -6px rgba(0,0,0,0.75);
+    width: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    padding: 0 50px;
+}
+
+div.settingsPage>div.form-group>div.usrimg{
+    margin: 20px auto;
+}
+div.settingsPage>div.form-group>div.usrimg>img{
+    width: 100px;
+}
+.text-muted{
+    font-size: 0.8rem;
+}

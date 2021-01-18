@@ -1,0 +1,35 @@
+main.home>div.requestInvite{
+    position: absolute;
+    left: 50vw;
+    top: 60vh;
+    background-color: white;
+    -webkit-box-shadow: 10px 10px 21px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 21px -6px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 21px -6px rgba(0,0,0,0.75);
+    width: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+main.home>div.requestInvite>div.eventlogo{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin: 25px auto;
+    margin-bottom: 0;
+    color: black;
+    background-size: 140px;
+    text-align: center;
+    padding: 40px 0;
+    font-weight: 900;
+    border: 1px solid black;
+}
+main.home>div.requestInvite>hr{
+    border-top: 2px solid black;
+    width: 35%;
+    margin: 30px auto;
+}
+main.home>div.requestInvite>div.greeting{
+    text-align: center;
+    color: black;
+    font-weight: 600;
+}

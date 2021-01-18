@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+
+/*-----------Bootstrap overrides-----------*/
+.btn-outline-primary{
+    color: #00bfb6;
+    border-color: #00bfb6;
+}
+.btn-outline-primary:hover,.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle{
+    color: #fff;
+    border-color: #00bfb6;
+    background-color: #00bfb6;
+}
+.btn-primary{
+    color: #fff;
+    border-color: #00bfb6;
+    background-color: #00bfb6;
+}
+.btn-primary:hover,.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+    color: #fff;
+    border-color: #00bfb6;
+    background-color: #008a83;
+}
+
+/*-----------------------------------------*/
+*{
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+body{
+    margin: 0;
+}
+@keyframes fade-out {
+    100%{opacity: 0; pointer-events: none}
+}
+.alert{
+    z-index: 2;
+    position: fixed !important;
+    left: 50vw !important;
+    top: 40vh !important;
+    transform: translate(-50%, -50%);
+    animation: fade-out;
+    animation-delay: 7s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    text-align: center !important;
+}
+/*hology.blade.php*/
+div.bg{
+    max-height: 100vh;
+    overflow: hidden;
+}
+div.bg>img{
+    min-width: 100%;
+    max-width: 100%;
+}
+div.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: black;
+    opacity: .2;
+    width: 100%;
+    height: 100%;
+}
+div.mainLogo{
+    position: absolute;
+    top: 10%;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+div.invite{
+    position: absolute;
+    left: 50%;
+    top: 70vh;
+    transform: translateX(-50%);
+}
+div.invite>form>input[type="text"]{
+    position: relative;
+    border: 1px solid #00bfb6;
+    width: 537px;
+    height: 60px;
+    border-radius: 17px;
+    background-color: rgba(0,0,0,.75);
+    color: white;
+    font-size: 25px;
+}
+div.invite>form>input[type="image"]{
+    height: 50px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+div.invite>form>input[type="text"]::placeholder{
+    color: rgba(0,191,182,.4);
+}
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100%{opacity: 100%; pointer-events: auto;}
+}
+div.invite>.register{
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+    margin-top: 12%;
+    font-size: 1.4rem;
+    animation-name: fade-in;
+    animation-delay: 5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+div.invite>.register>a, div.invite>.register>a:link, div.invite>.register>a:visited, div.invite>.register>a:focus, div.invite>.register>a:hover, div.invite>.register>a:active{
+    color: #B6CCC8;
+}
+/*register.blade.php*/
+main.register>div.bg{
+    max-height: 100vh;
+    overflow: hidden;
+}
+main.register>div.bg>img{
+    min-width: 100%;
+    max-width: 100%;
+}
+main.register>div.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: black;
+    opacity: .2;
+    width: 100%;
+    height: 100%;
+}
+@keyframes logoflick {
+    /*50% {transform: translateX(-50%) scale(0.6)}*/
+    100%{transform: translateX(100%) translateY(-50%) scale(0.6)}
+}
+main.register>div.mainLogo{
+    position: absolute;
+    top: 10%;
+    left: 50vw;
+    transform: translateX(-50%);
+    animation-name: logoflick;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+main.register>div.register, main.register>div.login{
+    position: absolute;
+    left: 50vw;
+    top: 60vh;
+    background-color: rgba(0,0,0,0.3);
+    height: 30%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+main.register>div.register>form.grid-container {
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 40% 5%;
+    grid-template-areas: "user-name email" "pword pword-repeat" "submit submit";
+}
+.user-name { grid-area: user-name; }
+.email { grid-area: email; }
+.pword { grid-area: pword; }
+.pword-repeat { grid-area: pword-repeat; }
+.submit { grid-area: submit; }
+@keyframes explainer-fade-in {
+    100%{opacity: 100%; pointer-events: auto}
+}
+main.register>div.explainer, main.crevent>div.explainer{
+    opacity: 0;
+    pointer-events: none;
+    animation-name: explainer-fade-in;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    position: absolute;
+    left: 50vw;
+    top: 22vh;
+    width: 40%;
+    background-color: rgba(0,0,0,0.3);
+    transform: translateX(-50%);
+    border-radius: 15px;
+}
+main.register>div.explainer>p{
+    color: white;
+    margin: 1rem;
+    text-align: center;
+}
+main.register>div.register>form.grid-container>input, main.register>div.register>form.grid-container>button, main.register>div.register>.grid-login>button, main.register>div.register>.grid-login>input{
+    width: auto;
+    height: 2.6rem;
+    border-radius: 17px;
+    background-color: rgba(0,0,0,1);
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+}
+main.register>div.register>form.grid-container>div.formerrors{
+    display: none;
+    position: absolute;
+    color: white;
+    top: 64%;
+    background: rgba(255,0,0,0.3);
+    width: 45%;
+    border-radius: 8px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+main.register>div.register>form.grid-container>button[type=submit]{
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 6px;
+    border: 1px solid white;
+}
+main.register>div.register>form.grid-container>button[type=submit]:disabled{
+    cursor: not-allowed;
+    opacity: 50%;
+}
+aside.loginbtns{
+    z-index: 100;
+    position: absolute;
+    top: 4%;
+}
+aside.guest{
+    right: 4%;
+}
+aside.withcontext{
+    right: 8%;
+}
+.grid-login {
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 40% 10%;
+    grid-template-areas: "AreaTop" "AreaMiddle" "AreaBottom";
+}
+.AreaTop { grid-area: AreaTop;}
+.AreaMiddle { grid-area: AreaMiddle;}
+.AreaBottom { grid-area: AreaBottom;}
+button.userAccount{
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    background: url(../img/user1.png);
+    background-size: contain;
+    border: none;
+}
+button.userAccount:focus{
+    outline: none;
+}
+
+/*.contextBox>div.event-button{
+    position: relative;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin-bottom: 90px;
+    !*padding: 15px 0;*!
+}*/
+/*.contextBox>div.event-button>div.event-button-title{
+    position: absolute;
+    width: 50px;
+    left: 0;
+    height: 5rem;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}*/
+/*.contextBox>div.event-button>a.shorthand{
+    display: block;
+    height: 50px;
+    padding: 15px 0;
+}*/
